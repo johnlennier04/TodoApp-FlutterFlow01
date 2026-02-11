@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User",
+  "description": "Schema for user account documents",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The full name of the user",
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "description": "The email address of the user",
+      "type": "string",
+      "format": "email"
+    },
+    "password": {
+      "description": "The user's account password (should be stored hashed)",
+      "type": "string",
+      "minLength": 8
+    },
+    "instagram_handle": {
+      "description": "The user's Instagram username (without @)",
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9._]{1,30}$"
+    },
+    "profile_picture": {
+      "description": "The URL of the user's profile picture",
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": ["name", "email", "password"],
+  "additionalProperties": false
+}

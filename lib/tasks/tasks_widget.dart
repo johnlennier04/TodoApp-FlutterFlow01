@@ -411,10 +411,7 @@ class _TasksWidgetState extends State<TasksWidget> {
                                 child: TaskWidget(
                                   key: Key(
                                       'Keyjcj_${listViewIndex}_of_${listViewTasksRecordList.length}'),
-                                  tasktext: valueOrDefault<String>(
-                                    listViewTasksRecord.title,
-                                    'Title',
-                                  ),
+                                  tasktext: listViewTasksRecord.title,
                                   completed: listViewTasksRecord.completed,
                                   tasksdoc: listViewTasksRecord,
                                   checkaction: () async {
